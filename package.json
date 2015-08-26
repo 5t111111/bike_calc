@@ -1,0 +1,17 @@
+{
+  "name": "my_bike_calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^0.12.10"
+  },
+  "devDependencies": {
+    "webpack": "^1.11.0"
+  }
+}
