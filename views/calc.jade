@@ -1,2 +1,12 @@
-form#calc
-  p {{text}}
+div#calc
+  div
+    input(v-model='tt' type='text' id='tt' placeholder='Top Tube Length(Effective)' size='30')
+  div
+    input(v-model='ct' type='text' id='ct' placeholder='Seat Tube Length')
+  div
+    input(v-model='sa' type='text' id='sa' placeholder='Seat Tube Angle')
+  button(v-on='click: calc') calc!
+  div
+    p Saddle Setback:{{sb}}
+  div
+    p Reach: {{reach}}

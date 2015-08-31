@@ -12,6 +12,14 @@ var Vue = require('vue');
 var vm = new Vue({
   el: '#calc',
   data: {
-      text: "test"
+      tt: "",
+      ct: "",
+      sa: "",
+      sb: ""
+  },
+  methods: {
+    calc: function() {
+      this.sb = Math.round(parseInt(this.ct, 10) * Math.cos(parseInt(this.sa, 10)/180*3.14));
+    }
   }
 });
