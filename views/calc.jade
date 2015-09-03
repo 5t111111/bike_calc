@@ -7,6 +7,8 @@ div#calc
     input(v-model='sa' type='text' id='sa' placeholder='Seat Tube Angle')
   button(v-on='click: calc') calc!
   div
-    p Saddle Setback:{{sb}}
+    p Saddle Setback:&nbsp;
+      b {{sb}}
   div
-    p Reach: {{reach}}
+    p Reach:&nbsp;
+      b {{reach}}

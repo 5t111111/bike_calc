@@ -15,11 +15,13 @@ var vm = new Vue({
       tt: "",
       ct: "",
       sa: "",
-      sb: ""
+      sb: "",
+      reach: ""
   },
   methods: {
     calc: function() {
-      this.sb = Math.round(parseInt(this.ct, 10) * Math.cos(parseInt(this.sa, 10)/180*3.14));
+      this.sb = Math.round(parseInt(this.ct, 10) * Math.cos(parseInt(this.sa, 10) / 180 * 3.14));
+      this.reach = this.tt - this.sb;
     }
   }
 });
