@@ -15,16 +15,16 @@ gulp.task('index', ['clean'], function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('build', ['index'], function (cb) {
+gulp.task('webpack', ['index'], function (cb) {
   return gulp.src(entry)
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('')); // dest は webpack 側で指定するためここでは指定しない
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['src/js/*.js'], ['build']);
-  // gulp.watch(['src/css/*.css'], ['build']);
-  gulp.watch(['src/jade/*.jade'], ['build']);
+  gulp.watch(['src/js/*.js'], ['webpack']);
+  // gulp.watch(['src/css/*.css'], ['webpack']);
+  gulp.watch(['src/jade/*.jade'], ['webpack']);
 });
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['webpack', 'watch']);
