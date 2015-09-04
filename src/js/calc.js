@@ -1,5 +1,5 @@
 /* require */
-var CalcJadeObj = require("../../views/calc.jade");
+var CalcJadeObj = require("../jade/calc.jade");
 var calcHtml = CalcJadeObj();
 
 document.getElementById("calc-wrapper").innerHTML = calcHtml;

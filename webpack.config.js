@@ -1,8 +1,7 @@
 module.exports = {
-  entry: './assets/js/calc.js',
   output: {
     path: __dirname,
-    filename: './assets/js/bundle.js'
+    filename: './dist/js/bundle.js'
   },
   module: {
     loaders: [
