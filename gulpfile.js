@@ -1,10 +1,15 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
-var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
+var del = require('del');
 var webpackConfig = require('./webpack.config.js');
 var entry = "./src/js/calc.js";
 
-gulp.task('index', function () {
+gulp.task('clean', function () {
+  return del(['dist/**/*']);
+});
+
+gulp.task('index', ['clean'], function () {
   gulp.src('src/jade/index.jade')
     .pipe(jade())
     .pipe(gulp.dest('./dist/'));
