@@ -15,7 +15,7 @@ gulp.task('index', ['clean'], function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('webpack', ['index'], function (cb) {
+gulp.task('webpack', ['index'], function () {
   return gulp.src(entry)
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('')); // dest は webpack 側で指定するためここでは指定しない
